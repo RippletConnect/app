@@ -11,7 +11,7 @@ struct RippletApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RippletEntryView()
                 .onOpenURL { url in
                     GIDSignIn.sharedInstance.handle(url)
                 }

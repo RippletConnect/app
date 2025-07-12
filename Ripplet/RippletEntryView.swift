@@ -5,29 +5,27 @@ import Firebase
 import FirebaseAuth
 import GoogleSignIn
 
-struct User {
-    let id: String
-    let name: String
-    let email: String
-}
-
-struct ContentView: View {
+struct RippletEntryView: View {
     @State private var isSignedIn = false
     @State private var currentUser: User? = nil
     @State private var showingError = false
     @State private var errorMessage = ""
     
+    @State private var accentColor: Color = Color(red: 69.0/255, green: 216.0/255, blue: 162.0/255)
+    
     var body: some View {
         if isSignedIn {
-            MainAppView(user: currentUser, onSignOut: {
-                signOut()
-            })
+            MainAppView(
+                user: currentUser,
+                onSignOut: {
+                    signOut()
+                }
+            )
         } else {
-        GeometryReader { geometry in
-            VStack(spacing: 0) {
-                Spacer()
-                
+            GeometryReader { geometry in
                 VStack(spacing: 12) {
+                    Spacer()
+                    
                     Text("Ripplet")
                         .font(.system(size: 48, weight: .bold, design: .rounded))
                         .foregroundColor(.primary)
@@ -36,86 +34,95 @@ struct ContentView: View {
                         .font(.title3)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
-                }
-                .padding(.horizontal, 32)
-                
-                Spacer()
-                
-                VStack(spacing: 16) {
-                    Button(action: {
-                        handleGoogleSignIn()
-                    }) {
-                        HStack {
-                            Image("GoogleLogo")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 20, height: 20)
-                            
-                            Text("Continue with Google")
-                                .font(.headline)
-                                .foregroundColor(.black)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .background(Color.white)
-                        .cornerRadius(8)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.gray.opacity(0.3), lineWidth: 1)
-                        )
-                    }
                     
-                    Button(action: {
-                        showAppleNotImplemented()
-                    }) {
-                        HStack {
-                            Image(systemName: "applelogo")
-                                .font(.title2)
-                                .foregroundColor(.white)
-                            
-                            Text("Continue with Apple")
-                                .font(.headline)
-                                .foregroundColor(.white)
+                    Spacer()
+                    
+                    Image("Ripplet")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 150)
+                        .cornerRadius(25)
+                    
+                    Spacer()
+                    
+                    VStack(spacing: 16) {
+                        Button(action: {
+                            handleGoogleSignIn()
+                        }) {
+                            HStack {
+                                Image("GoogleLogo")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 20, height: 20)
+                                
+                                Text("Continue with Google")
+                                    .font(.headline)
+                                    .foregroundColor(.black)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                            )
                         }
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 50)
-                        .background(Color.black)
-                        .cornerRadius(8)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.gray.opacity(0.3), lineWidth: 1)
-                        )
+                        
+                        Button(action: {
+                            showAppleNotImplemented()
+                        }) {
+                            HStack {
+                                Image(systemName: "applelogo")
+                                    .font(.title2)
+                                    .foregroundColor(.white)
+                                
+                                Text("Continue with Apple")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50)
+                            .background(Color.black)
+                            .cornerRadius(8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                            )
+                        }
                     }
+                    .padding(.horizontal, 32)
+                    
+                    Spacer()
+                        .frame(height: 60)
                 }
                 .padding(.horizontal, 32)
+            }
+            .accentColor(accentColor)
+            .alert("Error", isPresented: $showingError) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(errorMessage)
+            }
+            .onAppear {
+                configureGoogleSignIn()
+                checkAuthStatus()
                 
-                Spacer()
-                    .frame(height: 60)
+                if let config = GIDSignIn.sharedInstance.configuration {
+                    print("✅ Google Sign In configuration found: \(config.clientID)")
+                } else {
+                    print("❌ Google Sign In configuration missing!")
+                }
             }
-        }
-        .background(Color(UIColor.systemBackground))
-        .alert("Error", isPresented: $showingError) {
-            Button("OK", role: .cancel) { }
-        } message: {
-            Text(errorMessage)
-        }
-        .onAppear {
-            configureGoogleSignIn()
-            checkAuthStatus()
-            
-            if let config = GIDSignIn.sharedInstance.configuration {
-                print("✅ Google Sign In configuration found: \(config.clientID)")
-            } else {
-                print("❌ Google Sign In configuration missing!")
-            }
-        }
         }
     }
     
     private func configureGoogleSignIn() {
-        guard let path = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
-              let plist = NSDictionary(contentsOfFile: path),
-              let clientId = plist["CLIENT_ID"] as? String else {
+        guard
+            let path = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
+            let plist = NSDictionary(contentsOfFile: path),
+            let clientId = plist["CLIENT_ID"] as? String
+        else {
             print("❌ GoogleService-Info.plist not found or CLIENT_ID missing")
             return
         }
@@ -131,7 +138,10 @@ struct ContentView: View {
                 name: user.displayName ?? "User",
                 email: user.email ?? ""
             )
-            isSignedIn = true
+            
+            withAnimation {
+                isSignedIn = true
+            }
         }
     }
     
@@ -158,15 +168,19 @@ struct ContentView: View {
                     } else {
                         self.showError("Google Sign In failed: \(error.localizedDescription)")
                     }
+                    
                     return
                 }
                 
                 print("✅ Google Sign In result received")
                 
-                guard let user = result?.user,
-                      let idToken = user.idToken?.tokenString else {
+                guard
+                    let user = result?.user,
+                    let idToken = user.idToken?.tokenString
+                else {
                     print("❌ Failed to get user information from Google")
                     self.showError("Failed to get user information from Google")
+                    
                     return
                 }
                 
@@ -180,6 +194,7 @@ struct ContentView: View {
                     if let error = error {
                         print("❌ Firebase authentication failed: \(error)")
                         self.showError("Firebase authentication failed: \(error.localizedDescription)")
+                        
                         return
                     }
                     
@@ -202,8 +217,10 @@ struct ContentView: View {
     }
     
     private func showAppleNotImplemented() {
-        errorMessage = "Apple Sign In is not implemented yet. Please use Google Sign In."
-        showingError = true
+        withAnimation {
+            errorMessage = "Apple Sign In is not implemented yet. Please use Google Sign In."
+            showingError = true
+        }
     }
     
     private func signOut() {
@@ -221,17 +238,20 @@ struct ContentView: View {
     }
     
     private func showError(_ message: String) {
-        errorMessage = message
-        showingError = true
+        withAnimation {
+            errorMessage = message
+            showingError = true
+        }
     }
     
-
-    
     private func getRootViewController() -> UIViewController? {
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-              let window = windowScene.windows.first else {
+        guard
+            let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let window = windowScene.windows.first
+        else {
             return nil
         }
+        
         return window.rootViewController
     }
 }
@@ -251,11 +271,14 @@ struct MainAppView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Signed in as:")
                             .font(.headline)
+                        
                         Text(user.name)
                             .font(.title2)
+                        
                         Text(user.email)
                             .font(.caption)
                             .foregroundColor(.secondary)
+                        
                         Text("via Google")
                             .font(.caption)
                             .foregroundColor(.secondary)
@@ -279,5 +302,5 @@ struct MainAppView: View {
 }
 
 #Preview {
-    ContentView()
+    RippletEntryView()
 }

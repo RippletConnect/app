@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		723766952E22DB4000607A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7237668E2E22DB4000607A3D /* Assets.xcassets */; };
+		723766962E22DB4000607A3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 723766902E22DB4000607A3D /* GoogleService-Info.plist */; };
+		723766982E22DB4000607A3D /* RippletEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7237668F2E22DB4000607A3D /* RippletEntryView.swift */; };
+		723766992E22DB4000607A3D /* RippletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723766932E22DB4000607A3D /* RippletApp.swift */; };
+		7237669C2E22DE3100607A3D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7237669B2E22DE3100607A3D /* User.swift */; };
 		931EF0D82E21EBD700768730 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 931EF0D72E21EBD700768730 /* FirebaseAuth */; };
 		931EF0DB2E21EBE900768730 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 931EF0DA2E21EBE900768730 /* GoogleSignIn */; };
 		931EF0DD2E21EBE900768730 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 931EF0DC2E21EBE900768730 /* GoogleSignInSwift */; };
@@ -30,31 +35,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7237668E2E22DB4000607A3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7237668F2E22DB4000607A3D /* RippletEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippletEntryView.swift; sourceTree = "<group>"; };
+		723766902E22DB4000607A3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		723766912E22DB4000607A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		723766922E22DB4000607A3D /* Ripplet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ripplet.entitlements; sourceTree = "<group>"; };
+		723766932E22DB4000607A3D /* RippletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippletApp.swift; sourceTree = "<group>"; };
+		7237669B2E22DE3100607A3D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		931EF08A2E21D7F900768730 /* Ripplet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripplet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		931EF0982E21D7F900768730 /* RippletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RippletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		931EF0A22E21D7F900768730 /* RippletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RippletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		931EF0E12E21ECB000768730 /* Exceptions for "Ripplet" folder in "Ripplet" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 931EF0892E21D7F800768730 /* Ripplet */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		931EF08C2E21D7F900768730 /* Ripplet */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				931EF0E12E21ECB000768730 /* Exceptions for "Ripplet" folder in "Ripplet" target */,
-			);
-			path = Ripplet;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		931EF0872E21D7F800768730 /* Frameworks */ = {
@@ -84,10 +75,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		723766942E22DB4000607A3D /* Ripplet */ = {
+			isa = PBXGroup;
+			children = (
+				723766932E22DB4000607A3D /* RippletApp.swift */,
+				7237668F2E22DB4000607A3D /* RippletEntryView.swift */,
+				7237669B2E22DE3100607A3D /* User.swift */,
+			);
+			path = Ripplet;
+			sourceTree = "<group>";
+		};
+		7237669A2E22DB5400607A3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				723766922E22DB4000607A3D /* Ripplet.entitlements */,
+				7237668E2E22DB4000607A3D /* Assets.xcassets */,
+				723766912E22DB4000607A3D /* Info.plist */,
+				723766902E22DB4000607A3D /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		931EF0812E21D7F800768730 = {
 			isa = PBXGroup;
 			children = (
-				931EF08C2E21D7F900768730 /* Ripplet */,
+				7237669A2E22DB5400607A3D /* Resources */,
+				723766942E22DB4000607A3D /* Ripplet */,
 				931EF08B2E21D7F900768730 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -116,9 +129,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				931EF08C2E21D7F900768730 /* Ripplet */,
 			);
 			name = Ripplet;
 			packageProductDependencies = (
@@ -223,6 +233,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723766952E22DB4000607A3D /* Assets.xcassets in Resources */,
+				723766962E22DB4000607A3D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723766982E22DB4000607A3D /* RippletEntryView.swift in Sources */,
+				723766992E22DB4000607A3D /* RippletApp.swift in Sources */,
+				7237669C2E22DE3100607A3D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,15 +416,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Ripplet/Ripplet.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Resources/Ripplet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TW86NGM4A2;
+				DEVELOPMENT_TEAM = 8HQMC4MQ59;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Ripplet/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Ripplet;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -420,18 +437,20 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dylantran.Ripplet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elmallah.ripplet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -444,15 +463,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = Ripplet/Ripplet.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Resources/Ripplet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TW86NGM4A2;
+				DEVELOPMENT_TEAM = 8HQMC4MQ59;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Ripplet/Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Ripplet;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -463,18 +484,20 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dylantran.Ripplet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elmallah.ripplet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
