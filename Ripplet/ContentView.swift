@@ -81,6 +81,10 @@ struct ContentView: View {
                         .frame(height: 50)
                         .background(Color.black)
                         .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                        )
                     }
                 }
                 .padding(.horizontal, 32)
