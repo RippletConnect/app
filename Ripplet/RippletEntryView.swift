@@ -28,11 +28,11 @@ struct RippletEntryView: View {
                     
                     Text("Ripplet")
                         .font(.system(size: 48, weight: .bold, design: .rounded))
-                        .foregroundColor(.primary)
+                        .foregroundColor(.white)
                     
                     Text("Meet people, make friends.")
                         .font(.title3)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                     
                     Spacer()
@@ -91,18 +91,21 @@ struct RippletEntryView: View {
                             )
                         }
                     }
-                    .padding(.horizontal, 32)
+                    .padding(.horizontal, 16)
                     
                     Spacer()
                         .frame(height: 60)
                 }
                 .padding(.horizontal, 32)
             }
+            .background(Color(red: 0.6, green: 0.725, blue: 0.741)) // #99B9BD
+            .preferredColorScheme(.light)
             .accentColor(accentColor)
             .alert("Error", isPresented: $showingError) {
                 Button("OK", role: .cancel) { }
             } message: {
                 Text(errorMessage)
+                    .foregroundColor(.white)
             }
             .onAppear {
                 configureGoogleSignIn()
@@ -266,25 +269,28 @@ struct MainAppView: View {
                 Text("Welcome to Ripplet!")
                     .font(.largeTitle)
                     .fontWeight(.bold)
+                    .foregroundColor(.white)
                 
                 if let user = user {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Signed in as:")
                             .font(.headline)
+                            .foregroundColor(.white)
                         
                         Text(user.name)
                             .font(.title2)
+                            .foregroundColor(.white)
                         
                         Text(user.email)
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.white)
                         
                         Text("via Google")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.white)
                     }
                     .padding()
-                    .background(Color.gray.opacity(0.1))
+                    .background(Color.black.opacity(0.2))
                     .cornerRadius(8)
                 }
                 
@@ -293,11 +299,17 @@ struct MainAppView: View {
                 Button("Sign Out") {
                     onSignOut()
                 }
-                .buttonStyle(.borderedProminent)
+                .foregroundColor(.black)
+                .padding()
+                .background(Color.white)
+                .cornerRadius(8)
             }
             .padding()
             .navigationTitle("Ripplet")
+            .toolbarBackground(Color(red: 0.6, green: 0.725, blue: 0.741), for: .navigationBar)
+            .toolbarColorScheme(.dark, for: .navigationBar)
         }
+        .background(Color(red: 0.6, green: 0.725, blue: 0.741))
     }
 }
 
