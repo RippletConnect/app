@@ -9,9 +9,16 @@
 /* Begin PBXBuildFile section */
 		723766952E22DB4000607A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7237668E2E22DB4000607A3D /* Assets.xcassets */; };
 		723766962E22DB4000607A3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 723766902E22DB4000607A3D /* GoogleService-Info.plist */; };
-		723766982E22DB4000607A3D /* RippletEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7237668F2E22DB4000607A3D /* RippletEntryView.swift */; };
 		723766992E22DB4000607A3D /* RippletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723766932E22DB4000607A3D /* RippletApp.swift */; };
 		7237669C2E22DE3100607A3D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7237669B2E22DE3100607A3D /* User.swift */; };
+		72574CB02E49DA0500BFF138 /* ProfileToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72574CAF2E49DA0500BFF138 /* ProfileToolbar.swift */; };
+		72827EC32E3DF5D500EBA534 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72827EC22E3DF5D500EBA534 /* SignInView.swift */; };
+		72827EC72E3DF64200EBA534 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72827EC62E3DF64200EBA534 /* Settings.swift */; };
+		72827ECD2E3DF9E100EBA534 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72827ECC2E3DF9E100EBA534 /* LaunchScreen.swift */; };
+		72827ECF2E3DFDF800EBA534 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72827ECE2E3DFDF800EBA534 /* HomeView.swift */; };
+		72827ED12E3DFDFD00EBA534 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72827ED02E3DFDFD00EBA534 /* ChatView.swift */; };
+		72827ED32E3DFE3D00EBA534 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72827ED22E3DFE3D00EBA534 /* ProfileView.swift */; };
+		72827ED52E3DFE4300EBA534 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72827ED42E3DFE4300EBA534 /* CommunityView.swift */; };
 		931EF0D82E21EBD700768730 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 931EF0D72E21EBD700768730 /* FirebaseAuth */; };
 		931EF0DB2E21EBE900768730 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 931EF0DA2E21EBE900768730 /* GoogleSignIn */; };
 		931EF0DD2E21EBE900768730 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 931EF0DC2E21EBE900768730 /* GoogleSignInSwift */; };
@@ -36,12 +43,19 @@
 
 /* Begin PBXFileReference section */
 		7237668E2E22DB4000607A3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7237668F2E22DB4000607A3D /* RippletEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippletEntryView.swift; sourceTree = "<group>"; };
 		723766902E22DB4000607A3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		723766912E22DB4000607A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		723766922E22DB4000607A3D /* Ripplet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ripplet.entitlements; sourceTree = "<group>"; };
 		723766932E22DB4000607A3D /* RippletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippletApp.swift; sourceTree = "<group>"; };
 		7237669B2E22DE3100607A3D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		72574CAF2E49DA0500BFF138 /* ProfileToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileToolbar.swift; sourceTree = "<group>"; };
+		72827EC22E3DF5D500EBA534 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		72827EC62E3DF64200EBA534 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		72827ECC2E3DF9E100EBA534 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		72827ECE2E3DFDF800EBA534 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		72827ED02E3DFDFD00EBA534 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		72827ED22E3DFE3D00EBA534 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		72827ED42E3DFE4300EBA534 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
 		931EF08A2E21D7F900768730 /* Ripplet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripplet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		931EF0982E21D7F900768730 /* RippletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RippletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		931EF0A22E21D7F900768730 /* RippletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RippletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,8 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				723766932E22DB4000607A3D /* RippletApp.swift */,
-				7237668F2E22DB4000607A3D /* RippletEntryView.swift */,
-				7237669B2E22DE3100607A3D /* User.swift */,
+				72827ECC2E3DF9E100EBA534 /* LaunchScreen.swift */,
+				72827EC22E3DF5D500EBA534 /* SignInView.swift */,
+				72827ECB2E3DF70F00EBA534 /* Main Views */,
+				72827EC82E3DF64800EBA534 /* Models */,
 			);
 			path = Ripplet;
 			sourceTree = "<group>";
@@ -94,6 +110,27 @@
 				723766902E22DB4000607A3D /* GoogleService-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		72827EC82E3DF64800EBA534 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72827EC62E3DF64200EBA534 /* Settings.swift */,
+				7237669B2E22DE3100607A3D /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		72827ECB2E3DF70F00EBA534 /* Main Views */ = {
+			isa = PBXGroup;
+			children = (
+				72827ECE2E3DFDF800EBA534 /* HomeView.swift */,
+				72827ED02E3DFDFD00EBA534 /* ChatView.swift */,
+				72827ED42E3DFE4300EBA534 /* CommunityView.swift */,
+				72827ED22E3DFE3D00EBA534 /* ProfileView.swift */,
+				72574CAF2E49DA0500BFF138 /* ProfileToolbar.swift */,
+			);
+			path = "Main Views";
 			sourceTree = "<group>";
 		};
 		931EF0812E21D7F800768730 = {
@@ -259,8 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				723766982E22DB4000607A3D /* RippletEntryView.swift in Sources */,
+				72827EC72E3DF64200EBA534 /* Settings.swift in Sources */,
+				72827ECF2E3DFDF800EBA534 /* HomeView.swift in Sources */,
+				72827ED32E3DFE3D00EBA534 /* ProfileView.swift in Sources */,
+				72827ED12E3DFDFD00EBA534 /* ChatView.swift in Sources */,
+				72827ECD2E3DF9E100EBA534 /* LaunchScreen.swift in Sources */,
+				72574CB02E49DA0500BFF138 /* ProfileToolbar.swift in Sources */,
 				723766992E22DB4000607A3D /* RippletApp.swift in Sources */,
+				72827EC32E3DF5D500EBA534 /* SignInView.swift in Sources */,
+				72827ED52E3DFE4300EBA534 /* CommunityView.swift in Sources */,
 				7237669C2E22DE3100607A3D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

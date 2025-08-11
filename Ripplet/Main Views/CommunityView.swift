@@ -9,6 +9,7 @@ struct CommunityView: View {
                 Text("Community")
             }
             .navigationTitle("Community")
+            .profileToolbar()
         }
     }
 }

@@ -11,8 +11,8 @@ final class Settings: ObservableObject {
     let accentColor = Color(red: 69.0/255, green: 216.0/255, blue: 162.0/255)
     let backgroundColor = Color(red: 0.6, green: 0.725, blue: 0.741)
     
-    @Published var user: User? = nil
-    //@Published var user: User? = User(id: "1", name: "Test User", email: "test@gmail.com")
+    //@Published var user: User? = nil
+    @Published var user: User? = User(id: "1", name: "Test User", email: "test@gmail.com")
     
     @Published var showingError = false
     @Published var errorMessage = ""

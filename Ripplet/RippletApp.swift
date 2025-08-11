@@ -20,12 +20,39 @@ struct RippletApp: App {
                 } else if settings.user == nil {
                     SignInView()
                 } else {
-                    MainAppView()
+                    TabView {
+                        VStack {
+                            HomeView()
+                            
+                            Button(action: {
+                                withAnimation {
+                                    isLaunching = true
+                                }
+                            }) {
+                                Text("Replay launch screen")
+                            }
+                        }
+                        .tabItem {
+                            Label("Home", systemImage: "house.fill")
+                        }
+
+                        CommunityView()
+                            .tabItem {
+                                Label("Community", systemImage: "person.3.fill")
+                            }
+                        
+                        ChatView()
+                            .tabItem {
+                                Label("Chat", systemImage: "message.fill")
+                            }
+                    }
                 }
             }
             .environmentObject(settings)
             .accentColor(settings.accentColor)
             .tint(settings.accentColor)
+            .transition(.opacity)
+            .animation(.easeInOut, value: isLaunching)
             //.preferredColorScheme(.light)
             .onOpenURL { url in
                 GIDSignIn.sharedInstance.handle(url)

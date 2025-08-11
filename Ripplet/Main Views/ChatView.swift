@@ -9,6 +9,7 @@ struct ChatView: View {
                 Text("Chat")
             }
             .navigationTitle("Chat")
+            .profileToolbar()
         }
     }
 }

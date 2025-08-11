@@ -9,6 +9,7 @@ struct HomeView: View {
                 Text("Home")
             }
             .navigationTitle("Home")
+            .profileToolbar()
         }
     }
 }
