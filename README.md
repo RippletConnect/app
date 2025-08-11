@@ -1,1 +1,1 @@
-# mobile-app
+# Ripplet Connect iOS

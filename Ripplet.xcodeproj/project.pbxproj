@@ -49,6 +49,7 @@
 		723766932E22DB4000607A3D /* RippletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippletApp.swift; sourceTree = "<group>"; };
 		7237669B2E22DE3100607A3D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		72574CAF2E49DA0500BFF138 /* ProfileToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileToolbar.swift; sourceTree = "<group>"; };
+		72574CB12E49E11E00BFF138 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		72827EC22E3DF5D500EBA534 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		72827EC62E3DF64200EBA534 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		72827ECC2E3DF9E100EBA534 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 		931EF0812E21D7F800768730 = {
 			isa = PBXGroup;
 			children = (
+				72574CB12E49E11E00BFF138 /* README.md */,
 				7237669A2E22DB5400607A3D /* Resources */,
 				723766942E22DB4000607A3D /* Ripplet */,
 				931EF08B2E21D7F900768730 /* Products */,
