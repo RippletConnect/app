@@ -11,22 +11,14 @@ export default function Index() {
     if (!isLoaded) return;
     if (!isSignedIn) {
       router.replace("/sign-in");
+      return;
     }
+    router.replace("/(tabs)");
   }, [isLoaded, isSignedIn, router]);
 
   if (!isLoaded || !isSignedIn) {
     return null;
   }
 
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Welcome!</Text>
-    </View>
-  );
+  return null;
 }
