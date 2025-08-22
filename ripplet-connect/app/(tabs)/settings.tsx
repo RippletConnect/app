@@ -11,7 +11,6 @@ export default function SettingsScreen() {
       await signOut();
       router.replace("/sign-in");
     } catch (err) {
-      // eslint-disable-next-line no-console
       console.error("Sign out error", err);
     }
   };

@@ -35,7 +35,6 @@ export default function SignInScreen() {
           router.replace("/");
         }
       } catch (err) {
-        // eslint-disable-next-line no-console
         console.error("OAuth error", err);
       }
     },
