@@ -84,3 +84,5 @@ Temporary Items
 # Temporary files
 *.tmp
 *.temp 
+
+*.env
